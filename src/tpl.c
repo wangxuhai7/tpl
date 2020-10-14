@@ -570,8 +570,8 @@ fail:
     return NULL;
 }
 
-static int tpl_unmap_file( tpl_mmap_rec *mr) {
-
+static int tpl_unmap_file( tpl_mmap_rec *mr) 
+{
     if ( munmap( mr->text, mr->text_sz ) == -1 ) {
         tpl_hook.oops("Failed to munmap: %s\n", strerror(errno));
     }
